@@ -1,0 +1,30 @@
+img{
+	float:right;
+	border:3px solid #FFFFFF;
+}
+body{
+	background-image:url("../images/flag.jpg");
+}
+p{
+	color:yellow
+}
+h1{
+	color: white;
+}
+a:link{
+	color:yellow;
+}
+a:visited {
+    color:white;
+}
+a:hover{
+	color:orange;
+}
+a:active{
+	color: purple;
+}
+p.body::first-letter{
+	color:#fc90ab;
+	font-weight: bold;
+	font-size: x-large;
+}

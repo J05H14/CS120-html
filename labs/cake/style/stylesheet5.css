@@ -1,0 +1,23 @@
+#header{
+	color:white;
+	text-transform:uppercase;
+}
+.special{
+	border: 2px solid white;
+	background-color:pink;
+	
+	width:60%;
+	
+	margin-top:12px;
+	margin-right:20%;
+	margin-bottom:12px;
+	margin-left:20%;
+	
+	padding-top:3%;
+	padding-right:3%;
+	padding-bottom:3%;
+	padding-left:3%;
+}
+p{
+	color:red;
+}

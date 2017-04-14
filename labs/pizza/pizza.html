@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Pizza Order</title>
+		<script>
+			function order(){
+				var name = document.info.Name.value;
+				var address = document.info.Address.value;
+				var email = document.info.CustEmail.value;
+				var sizeValue;
+				var type = document.getElementById("selectType").value;
+				var toppings = document.getElementById.checked
+				var isPep = document.toppings.pep.checked;
+				var isMush = document.toppings.mush.checked;
+				var isSaus = document.toppings.saus.checked;
+				var isBac = document.toppings.bac.checked;
+				var isOliv = document.toppings.oliv.checked;
+				var top1;
+				var top2;
+				var top3;
+				var top4;
+				var count = 0;
+				var invalid = false;
+				var cost;
+				
+				if(type == "Regular"){
+					if(document.getElementById("r1").checked){
+						sizeValue=document.getElementById("r1").value;
+						cost = 5;
+					}
+					else if(document.getElementById("r2").checked){
+						sizeValue=document.getElementById("r2").value;
+						cost = 8;
+					}
+					else if(document.getElementById("r3").checked){
+						sizeValue=document.getElementById("r3").value;
+						cost = 10;
+					}
+					if(isPep){
+						count++;
+						if(top1 == undefined){
+						top1 = "Pepperoni";
+						}
+						else if(top1 != undefined && top2 == undefined){
+						top2 = "Pepperoni";
+						}
+						else if(top1 != undefined && top2 != undefined && top3 == undefined){
+						top3 = "Pepperoni";
+						}
+					}
+					if(isMush){
+						count++;
+						if(top1 == undefined){
+						top1 = "Mushroom";
+						}
+						else if(top1 != undefined && top2 == undefined){
+						top2 = "Mushroom";
+						}
+						else if(top1 != undefined && top2 != undefined && top3 == undefined){
+						top3 = "Mushroom";
+						}
+					}
+					
+					if(isSaus){
+						count++;
+						if(top1 == undefined){
+						top1 = "Sausage";
+						}
+						else if(top1 != undefined && top2 == undefined){
+						top2 = "Sausage";
+						}
+						else if(top1 != undefined && top2 != undefined && top3 == undefined){
+						top3 = "Sausage";
+						}
+					}
+					if(isBac){
+						count++;
+						if(top1 == undefined){
+						top1 = "Bacon";
+						}
+						else if(top1 != undefined && top2 == undefined){
+						top2 = "Bacon";
+						}
+						else if(top1 != undefined && top2 != undefined && top3 == undefined){
+						top3 = "Bacon";
+						}
+					}
+					
+					if(isOliv){
+						count++;
+						if(top1 == undefined){
+						top1 = "Olives";
+						}
+						else if(top1 != undefined && top2 == undefined){
+						top2 = "Olives";
+						}
+						else if(top1 != undefined && top2 != undefined && top3 == undefined){
+						top3 = "Olives";
+						}
+					}
+					if(count > 3){
+						invalid = true;
+					}
+					if(invalid == true){
+						window.alert("This is an invalid order");
+					}
+					else if(invalid == false){
+						if(top1){
+							cost = cost + 3;
+						}
+						if(top2){
+							cost = cost + 3;
+						}
+						if(top3){
+							cost = cost + 3;
+						}
+						if(top1 && top2 && top3){
+							window.alert("Thank you " + name + "!\n"
+								+ "The order is placed for a " + sizeValue + " "+ type + " pizza with " + top1 + ", " + top2 + ", and " +top3 + ".\n"
+								+ "It will be delivered to, " + address + ".\n"
+								+ "The total coast of the order is $" + cost + "\n"
+								+ "A confirmation will be sent to " + email);
+						}
+					
+						else if(top1 && top2){
+							window.alert("Thank you " + name + "!\n"
+								+ "The order is placed for a " + sizeValue + " "+ type + " pizza with " + top1 + " and " + top2 + ".\n"
+								+ "It will be delivered to, " + address + ".\n"
+								+ "The total coast of the order is $" + cost + "\n"
+								+ "A confirmation will be sent to " + email);
+						}
+						else if(top1){
+							window.alert("Thank you " + name + "!\n"
+								+ "The order is placed for a " + sizeValue + " "+ type + " pizza with " + top1 + ".\n"
+								+ "It will be delivered to, " + address + ".\n"
+								+ "The total coast of the order is $" + cost + "\n"
+								+ "A confirmation will be sent to " + email);
+						}
+						else if(top1 == undefined){
+							window.alert("Thank you " + name + "!\n"
+								+ "The order is placed for a " + sizeValue + " "+ type + " pizza with no toppings.\n"
+								+ "It will be delivered to, " + address + ".\n"
+								+ "The total coast of the order is $" + cost + "\n"
+								+ "A confirmation will be sent to " + email);
+						}
+					}
+				}
+				else if(type == "Deep Dish"){
+					cost = 4;
+					if(document.getElementById("r1").checked){
+						invalid = true;
+					}
+					else if(document.getElementById("r2").checked){
+						sizeValue=document.getElementById("r2").value;
+						cost = cost + 8;
+					}
+					else if(document.getElementById("r3").checked){
+						sizeValue=document.getElementById("r3").value;
+						cost = cost + 10;
+					}
+					if(isPep){
+						count++;
+						if(top1 == undefined){
+						top1 = "Pepperoni";
+						}
+						else if(top1 != undefined && top2 == undefined){
+						top2 = "Pepperoni";
+						}
+						else if(top1 != undefined && top2 != undefined && top3 == undefined){
+						top3 = "Pepperoni";
+						}
+						else if(top1 != undefined && top2 != undefined && top3 != undefined && top4 == undefined){
+						top4 = "Pepperoni";
+						}
+					}
+					if(isMush){
+						count++;
+						if(top1 == undefined){
+						top1 = "Mushroom";
+						}
+						else if(top1 != undefined && top2 == undefined){
+						top2 = "Mushroom";
+						}
+						else if(top1 != undefined && top2 != undefined && top3 == undefined){
+						top3 = "Mushroom";
+						}
+						else if(top1 != undefined && top2 != undefined && top3 != undefined && top4 == undefined){
+						top4 = "Mushroom";
+						}
+					}
+					
+					if(isSaus){
+						count++;
+						if(top1 == undefined){
+						top1 = "Sausage";
+						}
+						else if(top1 != undefined && top2 == undefined){
+						top2 = "Sausage";
+						}
+						else if(top1 != undefined && top2 != undefined && top3 == undefined){
+						top3 = "Sausage";
+						}
+						else if(top1 != undefined && top2 != undefined && top3 != undefined && top4 == undefined){
+						top4 = "Sausage";
+						}
+					}
+					if(isBac){
+						count++;
+						if(top1 == undefined){
+						top1 = "Bacon";
+						}
+						else if(top1 != undefined && top2 == undefined){
+						top2 = "Bacon";
+						}
+						else if(top1 != undefined && top2 != undefined && top3 == undefined){
+						top3 = "Bacon";
+						}
+						else if(top1 != undefined && top2 != undefined && top3 != undefined && top4 == undefined){
+						top4 = "Bacon";
+						}
+					}
+					
+					if(isOliv){
+						count++;
+						if(top1 == undefined){
+						top1 = "Olives";
+						}
+						else if(top1 != undefined && top2 == undefined){
+						top2 = "Olives";
+						}
+						else if(top1 != undefined && top2 != undefined && top3 == undefined){
+						top3 = "Olives";
+						}
+						else if(top1 != undefined && top2 != undefined && top3 != undefined && top4 == undefined){
+						top4 = "Olives";
+						}
+					}
+					if(count > 4){
+						invalid = true;
+					}
+					if(invalid == true){
+						window.alert("This is an invalid order");
+					}
+					else if(invalid == false){
+						if(top1){
+							cost = cost + 3;
+						}
+						if(top2){
+							cost = cost + 3;
+						}
+						if(top3){
+							cost = cost + 3;
+						}
+						if(top4){
+							cost = cost + 3;
+						}
+						if(top1 && top2 && top3 && top4){
+							window.alert("Thank you " + name + "!\n"
+								+ "The order is placed for a " + sizeValue + " "+ type + " pizza with " + top1 + ", " + top2 + ", " + top3 + ", and " +top4 + ".\n"
+								+ "It will be delivered to, " + address + ".\n"
+								+ "The total coast of the order is $" + cost + "\n"
+								+ "A confirmation will be sent to " + email);
+						}
+						else if(top1 && top2 && top3){
+							window.alert("Thank you " + name + "!\n"
+								+ "The order is placed for a " + sizeValue + " "+ type + " pizza with " + top1 + ", " + top2 + ", and " +top3 + ".\n"
+								+ "It will be delivered to, " + address + ".\n"
+								+ "The total coast of the order is $" + cost + "\n"
+								+ "A confirmation will be sent to " + email);
+						}
+					
+						else if(top1 && top2){
+							window.alert("Thank you " + name + "!\n"
+								+ "The order is placed for a " + sizeValue + " "+ type + " pizza with " + top1 + " and " + top2 + ".\n"
+								+ "It will be delivered to, " + address + ".\n"
+								+ "The total coast of the order is $" + cost + "\n"
+								+ "A confirmation will be sent to " + email);
+						}
+						else if(top1){
+							window.alert("Thank you " + name + "!\n"
+								+ "The order is placed for a " + sizeValue + " "+ type + " pizza with " + top1 + ".\n"
+								+ "It will be delivered to, " + address + ".\n"
+								+ "The total coast of the order is $" + cost + "\n"
+								+ "A confirmation will be sent to " + email);
+						}
+						else if(top1 == undefined){
+							window.alert("Thank you " + name + "!\n"
+								+ "The order is placed for a " + sizeValue + " "+ type + " pizza with no toppings.\n"
+								+ "It will be delivered to, " + address + ".\n"
+								+ "The total coast of the order is $" + cost + "\n"
+								+ "A confirmation will be sent to " + email);
+						}
+					}
+				}
+			}
+				
+
+		</script>
+	</head>
+	
+	<body>
+		<h1>Order Mario's Pizza</h1>
+		<h4>Customer Info:</h4>
+		<form name = "info">
+			Name:<input type = "text" name = "Name" />
+			Address:<input type = "text" name = "Address"/>
+			Email:<input type = "email" name = "CustEmail" id="CustEmail" />
+		</form>
+		
+		<h4>Pizza Size:</h4>
+		<form name= "psize">
+			
+				<input type = "radio" id="r1" name="size" value="Small">Small<br/>
+				<input type = "radio" id="r2" name="size" value="Medium">Medium<br/>
+				<input type = "radio" id="r3" name="size" value="Large">Large<br/>
+			
+		</form>
+		
+		<h4>Choose Pizza Type:</h4>
+		<select id="selectType">
+			<option value="Regular">Regular</option>
+			<option value="Deep Dish">Deep Dish</option>
+		</select>
+		
+		<h4>Toppings:</h4>
+		<form name= "toppings">
+			<input type="checkbox" name="pep" value="Pepperoni">Pepperoni
+			<input type="checkbox" name="mush" value="Mushroom">Mushroom
+			<input type="checkbox" name="saus" value="Sausage">Sausage
+			<input type="checkbox" name="bac" value="Bacon">Bacon
+			<input type="checkbox" name="oliv" value="Olive">Olives
+		</form>
+		<br><button onclick="order()">Submit</button>
+	</body>
+</html>
