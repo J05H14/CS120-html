@@ -2,6 +2,8 @@
 <html>
 	<head>
 		<title>Pizza Order</title>
+		<link rel = "stylesheet" href = "style/pizzaStyle.css" />
+		<link rel="icon" href= "../../favicon.ico" />
 		<script>
 			function order(){
 				var name = document.info.Name.value;
@@ -299,8 +301,12 @@
 	</head>
 	
 	<body>
-		<h1>Order Mario's Pizza</h1>
-		<h4>Customer Info:</h4>
+		<img src = "images/pizza-slice.png" width = "10%" />
+	
+		<div>
+			<h1 id = "title">Order Mario's Pizza</h1>
+			<h4>Customer Info:</h4>
+		</div>
 		<form name = "info">
 			Name:<input type = "text" name = "Name" />
 			Address:<input type = "text" name = "Address"/>
